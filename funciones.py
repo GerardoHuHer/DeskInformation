@@ -4,4 +4,4 @@ class User:
         self.__password = password
         self.__directory = directory
 
-    
+
