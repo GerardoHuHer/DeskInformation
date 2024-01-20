@@ -13,26 +13,26 @@ class Interface(ctk.CTk):
         token = fn.leerArchivoToken()
 
         self.github_token = ctk.CTkLabel(self, text="GitHub Token:")
-        self.github_token.grid(column=0, row=0, pady=5, padx=5)
+        self.github_token.grid(column=0, row=0)
 
         self.token_label = ctk.CTkLabel(self, text=token)
-        self.token_label.grid(column=1, row=0, pady=5, padx=5)
+        self.token_label.grid(column=1, row=0)
 
         self.new_token_entry = ctk.CTkEntry(self)
-        self.new_token_entry.grid(column=0, row=1, pady=5, padx=5)
+        self.new_token_entry.grid(column=0, row=1)
         self.new_token_entry.insert(0, "Ingrese su nuevo token")
 
         self.new_token_button = ctk.CTkButton(self, text="Cambiar Token", command=self.cambiar_token)
-        self.new_token_button.grid(column=1, row=1, pady=5, padx=5)
+        self.new_token_button.grid(column=1, row=1)
 
         self.task_button = ctk.CTkButton(self, text="Add Task")
-        self.task_button.grid(column=1, row=2, pady=5, padx=5)
+        self.task_button.grid(column=1, row=2)
 
         self.copy_token = ctk.CTkButton(self, text = "Copiar Token", command=self.copiar_token)
-        self.copy_token.grid(column = 2, row = 0, pady = 5, padx = 5)
+        self.copy_token.grid(column = 2, row = 0)
 
         self.quit_button = ctk.CTkButton(self, text="Quit", command=self.quitar)
-        self.quit_button.grid(column=1, row=3, pady=5, padx=5)
+        self.quit_button.grid(column=1, row=3)
 
     def quitar(self):
         self.destroy()
